@@ -1,0 +1,7 @@
+# Inference (ONNX Runtime, torch-free pure-ONNX path)
+onnxruntime-gpu>=1.17.0
+numpy
+tokenizers>=0.15.0
+imageio>=2.31.0
+imageio-ffmpeg>=0.4.9
+tqdm>=4.66.0

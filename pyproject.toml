@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wannx"
+version = "1.0.0"
+description = "CLI tool to convert WAN video generation model modules to ONNX"
+requires-python = ">=3.10"
+# Inference (ONNX Runtime, torch-free pure-ONNX path).
+dependencies = [
+    "onnxruntime-gpu>=1.17.0",
+    "numpy",
+    "tokenizers>=0.15.0",
+    "imageio>=2.31.0",
+    "imageio-ffmpeg>=0.4.9",
+    "tqdm>=4.66.0",
+]
+
+# Conversion (checkpoint -> ONNX); CPU/RAM-bound. `pip install .[convert]`
+[project.optional-dependencies]
+convert = [
+    "torch>=2.4.0",
+    "torchvision",
+    "onnx>=1.15.0",
+    "onnxscript>=0.1.0",
+    "safetensors",
+    "transformers>=4.49.0",
+    "diffusers>=0.31.0",
+    "einops",
+    "ftfy",
+    "regex",
+]
+
+[project.scripts]
+wannx = "wannx.cli:main"
+wannx-simple = "wannx.simple_cli:main"
+
+[tool.setuptools.packages.find]
+include = ["wannx*"]

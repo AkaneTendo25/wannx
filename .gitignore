@@ -1,0 +1,34 @@
+# Virtual environments
+.venv/
+.venv-convert/
+
+# Converted ONNX weights
+onnx_output/
+*.onnx
+*.onnx.data
+
+# Model checkpoints / weights
+*.pth
+*.pt
+*.safetensors
+
+# Generated media / scratch
+outputs/
+*.mp4
+*.png
+*.webp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Local agent / editor
+.claude/
+.vscode/
+.idea/
+
+# scratch logs
+*.log

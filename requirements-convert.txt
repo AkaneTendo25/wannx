@@ -1,0 +1,13 @@
+# Conversion (checkpoint -> ONNX). CPU/RAM-bound; does not use the GPU.
+torch>=2.4.0
+torchvision
+onnx>=1.15.0
+onnxscript>=0.1.0
+numpy
+safetensors
+transformers>=4.49.0
+diffusers>=0.31.0
+einops
+ftfy
+regex
+tqdm>=4.66.0
